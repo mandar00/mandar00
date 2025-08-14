@@ -24,13 +24,7 @@ jobs:
           # Calendar plugin
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          
-          # Activity plugin for recent commits
-          plugin_activity: yes
-          plugin_activity_limit: 5
-          plugin_activity_days: 14
-          plugin_activity_timestamps: yes
-          
+
           # Optional: Add habit tracking
           plugin_habits: yes
           plugin_habits_from: 200
