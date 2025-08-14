@@ -18,7 +18,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: github-metrics-calendar-activity.svg
           user: mandar00
-          template: terminal
+          template: classic
           base: ""
           
           # Calendar plugin
