@@ -23,7 +23,7 @@ jobs:
           # Options
           user: mandar00
           template: classic
-          base: header, activity, community, repositories, metadata
+          base: header, activity, metadata
           
           # Languages plugin configuration
           plugin_languages: yes
@@ -44,25 +44,14 @@ jobs:
           plugin_followup: yes
           plugin_followup_sections: repositories
           
-          plugin_gists: yes
-          
           plugin_introduction: yes
           plugin_introduction_title: yes
           
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
+          plugin_isocalendar_duration: full-year
           
           plugin_lines: yes
           
           plugin_notable: yes
           plugin_notable_from: organization
           plugin_notable_types: commit
-          
-          plugin_people: yes
-          plugin_people_types: followers, following
-          
-          plugin_repositories: yes
-          plugin_repositories_order: featured, pinned, starred, random
-          
-          plugin_stars: yes
-          plugin_stars_limit: 4
