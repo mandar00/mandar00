@@ -23,7 +23,7 @@ jobs:
           # Options
           user: mandar00
           template: classic
-          base: header, activity, metadata
+          base: header, metadata
           
           # Languages plugin configuration
           plugin_languages: yes
@@ -46,9 +46,6 @@ jobs:
           
           plugin_introduction: yes
           plugin_introduction_title: yes
-          
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
           
           plugin_lines: yes
           

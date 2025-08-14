@@ -1,0 +1,39 @@
+name: Calendar and Activity Metrics
+on:
+  schedule: [{cron: "0 1 * * *"}]
+  workflow_dispatch:
+  push: {branches: ["main", "master"]}
+
+jobs:
+  calendar-activity-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+      pull-requests: read
+    steps:
+      - name: Generate Calendar and Activity Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          filename: github-metrics-calendar-activity.svg
+          user: mandar00
+          template: classic
+          base: ""
+          
+          # Calendar plugin
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          
+          # Activity plugin for recent commits
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_activity_days: 14
+          plugin_activity_timestamps: yes
+          
+          # Optional: Add habit tracking
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
